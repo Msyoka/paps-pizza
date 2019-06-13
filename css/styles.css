@@ -1,0 +1,28 @@
+/***********FILE IMPORTS**********/
+/***************************************/
+@import url("bootstrap.css");
+/*************GENERAL*****************/
+/*************************************/
+body{
+  background-image: url("../images/back.jpg");
+}
+header {
+  color: white;
+}
+.p13 {
+  font-size: 13px
+}
+.p24 {
+  font-size: 24px
+}
+.p20 {
+  font-size: 20px
+}
+.jumbotron {
+  text-align: center;
+}
+footer {
+  background-color: white;
+  text-align: center;
+
+}

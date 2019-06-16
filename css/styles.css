@@ -4,10 +4,8 @@
 /*************GENERAL*****************/
 /*************************************/
 body{
-  background-image: url("../images/back.jpg");
-}
-header {
-  color: white;
+  background-color: white;
+
 }
 .p13 {
   font-size: 13px
@@ -24,5 +22,14 @@ header {
 footer {
   background-color: white;
   text-align: center;
-
 }
+/*******************HEADER****************************/
+/******************************************************/
+header {
+  color: red;
+}
+.nav {
+  float: right;
+}
+/*******************CAROSEL**************************/
+/**********************************************/

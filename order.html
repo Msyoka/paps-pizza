@@ -83,7 +83,6 @@
                     </select>
                   </div>
                 </div>
-
                 <div class="row container">
                   <div class="col"><p>Flavor (+Ksh.200)</p></div>
                   <div class="col" class="form-option">
@@ -111,9 +110,40 @@
               <ul id="default-pizza-details"></ul>
             </div>
             <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
-            <button type="btn" class="btn btn-danger" id="delivery-btn">Delivery</button>
             <h3><span id="delivery-option"></span></h3>
+            <button type="btn" class="btn btn-danger" id="delivery-btn">Delivery</button>
           </div>
+        </div>
+        <div class="form-group" id="address">
+          <h3>Delivery Address</h3>
+          <form id="address-form">
+            <div class="row">
+              <div class="col">
+                <label for="first-name">First Name</label><input required type="text" class="form-control address-spacing">
+              </div>
+              <div class="col">
+                <label for="last-name">Last Name</label><input required type="text" class="form-control address-spacing">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="street-address">Address</label><input required type="text" class="form-control" id="street-add">
+              </div>
+              <div class="col">
+                <label for="city-name">City</label><input required type="text" class="form-control" id="city-add">
+              </div>
+              <div class="col">
+                <label for="county-name">County</label>
+                <select required class="form-control delivery-address" id="county-select">
+                  <option></option>
+                  <option>Nairobi</option>
+                  <option>Nakuru</option>
+                  <option>Mombasa</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="order-proceed-btn">Submit</button>
+          </form>
         </div>
       </div>
     </div>

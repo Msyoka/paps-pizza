@@ -39,8 +39,18 @@ Order.prototype.finalCost = function () {
   }
   return cartTotalPrice;
 }
+function Address (streetAddress, city, county) {
+  this.streetAddress = streetAddress;
+  this.city = city;
+  this.county = county;
+  this.deliveryAddress = (streetAddress + "  " + city + ", " + county);
+}
 //User Interface Logic
 $(document).ready(function(event) {
+  $("#delivery-btn").click(function() {
+    $("#address").show();
+    $("#landing-content").hide();
+  });
   $("form#custom-pizza").submit(function(event) {
     event.preventDefault();
     var customSize = $("select#size").val();
@@ -65,5 +75,19 @@ $(document).ready(function(event) {
   });
   $("#checkout-btn").click(function() {
     location.reload();
+  });
+  $("#delivery-btn").click(function() {
+    $("#address").show();
+    $("#pickup-btn,#delivery-btn,#landing-tagline").hide();
+  });
+  $("form#address-form").submit(function(event) {
+    event.preventDefault();
+    var streetAddress = $("input#street-add").val();
+    var city = $("input#city-add").val();
+    var state = $("select#county-select").val();
+    var newAddress = new Address(streetAddress, city, county)
+    $("#order-content").show();
+    $("#landing-content").hide();
+    $("#delivery-option").text("DELIVER TO: " + newAddress.deliveryAddress);
   });
 });

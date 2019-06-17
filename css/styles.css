@@ -1,11 +1,13 @@
 /***********FILE IMPORTS**********/
 /***************************************/
 @import url("bootstrap.css");
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 /*************GENERAL*****************/
 /*************************************/
 body{
   background-color: white;
   text-align: center;
+  color: black;
 }
 .p13 {
   font-size: 13px
@@ -23,7 +25,7 @@ body{
 /*******************HEADER****************************/
 /******************************************************/
 header {
-  color: red;
+  color: white;
 }
 nav {
   text-align: center;
@@ -42,6 +44,7 @@ a {
 a hover {
   background-color: #BFC5D1 ;
 }
+
 /*******************CAROSEL**************************/
 /**********************************************/
 /********************SIZE***************************/

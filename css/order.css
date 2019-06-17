@@ -20,3 +20,8 @@ body{
 .jumbotron {
   text-align: center;
 }
+/*******************FOOTER*************************/
+/***************************************************/
+footer {
+  background-color: white;
+}

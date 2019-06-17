@@ -33,10 +33,9 @@
         <div class="row">
           <div class="col">
             <h2>Pizza</h2>
-            <button type="btn" class="btn btn-primary" id="custom-pizza-btn">Custom Pizza</button>
             <form class="form-group" id="custom-pizza">
               <div id="form-content">
-                <h3 id="form-header">Custom Pizza Form</h3>
+                <p id="form-header">Select your preferred specification,</p>
                 <div class="row container">
                   <div class="col"><p>Size</p></div>
                   <div class="col" class="form-option">
@@ -52,6 +51,7 @@
                   <div class="col"><p>Crust</p></div>
                   <div class="col" class="form-option">
                     <select required class="form-control" id="crust">
+                      <option></option>
                       <option value="gluten-free">GLuten free</option>
                       <option value="crispy">Crispy</option>
                       <option value="stuffed">Stuffed</option>
@@ -88,6 +88,7 @@
                   <div class="col"><p>Flavor (+Ksh.200)</p></div>
                   <div class="col" class="form-option">
                     <select required class="form-control" id="flavor">
+                      <option></option>
                       <option value="macaroni">Macaroni and cheese</option>
                       <option value="chicken">Chicken and beef pepperoni</option>
                       <option value="pepperoni">Pepperoni</option>
@@ -110,6 +111,7 @@
               <ul id="default-pizza-details"></ul>
             </div>
             <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
+            <button type="btn" class="btn btn-danger" id="delivery-btn">Delivery</button>
             <h3><span id="delivery-option"></span></h3>
           </div>
         </div>

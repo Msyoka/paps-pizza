@@ -29,13 +29,10 @@ Order.prototype.pizzaCost = function () {
   this.pizzaPrice += this.flavor;
   return this.pizzaPrice;
 }
-Order.prototype.sideCost = function () {
-  return this.sidePrice;
-}
 Order.prototype.finalCost = function () {
   var cartTotalPrice = 0;
   for (var arrayElement = 0; arrayElement < totalPriceArray.length; arrayElement ++) {
-    cartTotalPrice += totalPriceArray[arrayElement]; //////////////////////IMPORTANT!!! How to add contents of an array together
+    cartTotalPrice += totalPriceArray[arrayElement];
   }
   return cartTotalPrice;
 }
@@ -47,10 +44,7 @@ function Address (streetAddress, city, county) {
 }
 //User Interface Logic
 $(document).ready(function(event) {
-  $("#delivery-btn").click(function() {
-    $("#address").show();
-    $("#landing-content").hide();
-  });
+
   $("form#custom-pizza").submit(function(event) {
     event.preventDefault();
     var customSize = $("select#size").val();
@@ -58,7 +52,7 @@ $(document).ready(function(event) {
     var cheese = $("select#cheese").val();
     var toppings = $("select#toppings").val();
     var flavor = $("select#flavor").val();
-    var pizzaDetails = (customSize + " - " + crust + ", " + cheese + ", " + toppings + ", " + meat);
+    var pizzaDetails = (customSize + " - " + crust + ", " + cheese + ", " + toppings + ", "  + flavor);
     var newPizzaOrder = new Order(customSize, cheese);
     newPizzaOrder.pizzaCost();
     totalPriceArray.push(newPizzaOrder.pizzaPrice);
@@ -70,24 +64,8 @@ $(document).ready(function(event) {
   $("#pizza-details-dropdown").click(function() {
     $("#pizza-details").toggle();
   });
-  $("#sides-dropdown").click(function() {
-    $("#sides-details").toggle();
-  });
+///Checkout Btn
   $("#checkout-btn").click(function() {
     location.reload();
-  });
-  $("#delivery-btn").click(function() {
-    $("#address").show();
-    $("#pickup-btn,#delivery-btn,#landing-tagline").hide();
-  });
-  $("form#address-form").submit(function(event) {
-    event.preventDefault();
-    var streetAddress = $("input#street-add").val();
-    var city = $("input#city-add").val();
-    var state = $("select#county-select").val();
-    var newAddress = new Address(streetAddress, city, county)
-    $("#order-content").show();
-    $("#landing-content").hide();
-    $("#delivery-option").text("DELIVER TO: " + newAddress.deliveryAddress);
   });
 });

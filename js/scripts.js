@@ -68,4 +68,7 @@ $(document).ready(function(event) {
   $("#checkout-btn").click(function() {
     location.reload();
   });
+  $("#delivery-btn").click(function() {
+    $("#address").show();
+  });
 });

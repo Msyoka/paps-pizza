@@ -71,4 +71,14 @@ $(document).ready(function(event) {
   $("#delivery-btn").click(function() {
     $("#address").show();
   });
+    $("form#address-form").submit(function(event) {
+    event.preventDefault();
+    var streetAddress = $("input#street-add").val();
+    var city = $("input#city-add").val();
+    var county = $("select#county-select").val();
+    var newAddress = new Address(streetAddress, city, county)
+    $("#order-content").show();
+    $("#landing-content").hide();
+    $("#delivery-option").text("DELIVER TO: " + newAddress.deliveryAddress);
+  });
 });

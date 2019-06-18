@@ -4,7 +4,7 @@
 A pizza eatout website with order and delivery options.
 
 ## Setup/Installation Requirements
-* git clone
+* git clone https://github.com/Msyoka/paps-pizza.git
 * cd paps-pizza
 * open index.html file on your browser
 
